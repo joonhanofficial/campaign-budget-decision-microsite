@@ -18,6 +18,8 @@ function animateCounter(counter) {
     return;
   }
 
+  counter.textContent = "0";
+
   const duration = 1150;
   const start = performance.now();
 
