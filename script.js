@@ -10,7 +10,7 @@ function formatNumber(value) {
 function animateCounter(counter) {
   if (counter.dataset.animated === "true") return;
 
-  const target = Number(counter.dataset.count);
+  const target = Number(counter.dataset.target);
   counter.dataset.animated = "true";
 
   if (reducedMotion) {
