@@ -18,7 +18,7 @@ function animateCounter(counter) {
     return;
   }
 
-  counter.textContent = "0";
+  const currentValue = Number(counter.textContent.replace(/,/g, "")) || target;
 
   const duration = 1150;
   const start = performance.now();
@@ -26,7 +26,9 @@ function animateCounter(counter) {
   function tick(now) {
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
-    counter.textContent = formatNumber(Math.round(target * eased));
+    const value = Math.round(currentValue + (target - currentValue) * eased);
+
+    counter.textContent = formatNumber(value);
 
     if (progress < 1) {
       requestAnimationFrame(tick);
