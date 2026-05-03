@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A static analytics case study microsite turning campaign metrics into budget decisions."
+    />
+    <title>Turning Campaign Metrics Into Budget Decisions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Campaign budget decision home">
+        <span class="brand-mark"></span>
+        Joon Han | Digital Diagnostics
+      </a>
+      <nav class="nav-links">
+        <a href="#method">Method</a>
+        <a href="#actions">Actions</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#full-case-study">Full Case Study</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Marketing Analytics Case Study</p>
+          <h1>
+            Turning Campaign Metrics
+            <span>Into Budget Decisions.</span>
+          </h1>
+          <p class="business-question">
+            Which campaigns deserve more budget, which need review, and which are creating spend risk?
+          </p>
+          <div class="tool-stack" aria-label="Tool stack">
+            <span>Python</span>
+            <span>Excel</span>
+            <span>Marketing Analytics</span>
+          </div>
+          <p class="result-statement">
+            Analyzed 10,000 campaign rows across spend, revenue, conversions, CPA, ROAS,
+            profit, and platform to convert reporting metrics into budget review actions.
+          </p>
+          <div class="hero-stat-strip" aria-label="Hero case study highlights">
+            <div>
+              <strong class="counter" data-count="10000">0</strong>
+              <span>campaign rows</span>
+            </div>
+            <div>
+              <strong>Action</strong>
+              <span>budget decision layer</span>
+            </div>
+            <div>
+              <strong>Platform</strong>
+              <span>scaling and risk mix</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Budget action summary">
+          <div class="panel-topline">
+            <span>Decision Output</span>
+            <strong>10,000 rows</strong>
+          </div>
+          <div class="signal-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="hero-metric">
+            <span class="counter" data-count="3297">0</span>
+            <p>campaigns marked Increase Budget</p>
+          </div>
+          <div class="mini-bars" aria-label="Budget action distribution preview">
+            <span style="--w: 32.97%" title="Increase Budget">
+              <em>Increase</em>
+            </span>
+            <span style="--w: 34.34%" title="Review">
+              <em>Review</em>
+            </span>
+            <span style="--w: 11%" title="Hold">
+              <em>Hold</em>
+            </span>
+            <span style="--w: 21.69%" title="Reduce Budget">
+              <em>Reduce</em>
+            </span>
+          </div>
+          <div class="panel-footer">
+            <span>Decision layer</span>
+            <strong>Metrics to action</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="problem content-section reveal" id="problem">
+        <div class="section-kicker">Problem</div>
+        <div class="split">
+          <h2>Campaign reporting should not stop at metric snapshots.</h2>
+          <p>
+            Spend, revenue, conversions, CPA, ROAS, and profit are useful only when
+            they help a marketing team decide what to do next. The core question was
+            not simply which campaigns performed well. It was which campaigns should
+            receive more budget, which should be reviewed, which should hold, and
+            which should be reduced before they create more risk.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section" id="method">
+        <div class="section-kicker reveal">Method</div>
+        <div class="section-heading reveal">
+          <h2>From performance metrics to budget action logic.</h2>
+          <p>
+            The analysis translated core campaign indicators into a decision layer:
+            ROAS, CPA, profit, and conversion rate informed the final budget action.
+          </p>
+        </div>
+        <div class="logic-flow" aria-label="Budget decision logic">
+          <article class="logic-card insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <span>Input</span>
+            <h3>ROAS</h3>
+            <p>Measures revenue return against spend to identify scaling potential.</p>
+            <div class="card-insight">
+              High ROAS can signal scaling potential, but it does not automatically mean the campaign is low risk.
+            </div>
+          </article>
+          <article class="logic-card insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <span>Input</span>
+            <h3>CPA</h3>
+            <p>Shows how expensive each conversion is and where efficiency risk appears.</p>
+            <div class="card-insight">
+              CPA helps identify efficiency pressure. A campaign can generate conversions but still be too expensive to scale.
+            </div>
+          </article>
+          <article class="logic-card insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <span>Input</span>
+            <h3>Profit</h3>
+            <p>Separates surface-level volume from financially meaningful outcomes.</p>
+            <div class="card-insight">
+              Profit separates surface-level activity from financially meaningful outcomes.
+            </div>
+          </article>
+          <article class="logic-card insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <span>Input</span>
+            <h3>Conversion Rate</h3>
+            <p>Connects traffic quality to conversion behavior before budget decisions.</p>
+            <div class="card-insight">
+              Conversion rate helps check whether traffic quality is strong enough to support a budget decision.
+            </div>
+          </article>
+          <article class="logic-card decision reveal">
+            <span>Output</span>
+            <h3>Budget Action</h3>
+            <p>Increase Budget, Review, Hold, or Reduce Budget.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="actions">
+        <div class="section-kicker reveal">Budget Action Breakdown</div>
+        <div class="section-heading reveal">
+          <h2>Every campaign receives a next-step recommendation.</h2>
+          <p>
+            The output was designed for budget review meetings, not passive reporting.
+          </p>
+        </div>
+
+        <div class="action-dashboard reveal">
+          <div class="action-cards" aria-label="Budget action count cards">
+            <article class="action-card increase-card insight-card" tabindex="0" role="button" aria-expanded="false">
+              <span>Scale</span>
+              <strong class="counter" data-count="3297">0</strong>
+              <p>Increase Budget</p>
+              <div class="card-insight">
+                Campaigns in this group showed stronger efficiency and scaling signals, making them clearer candidates for budget expansion.
+              </div>
+            </article>
+            <article class="action-card review-card insight-card" tabindex="0" role="button" aria-expanded="false">
+              <span>Inspect</span>
+              <strong class="counter" data-count="3434">0</strong>
+              <p>Review</p>
+              <div class="card-insight">
+                These campaigns showed mixed signals. They are not immediate scale or cut decisions and need closer inspection.
+              </div>
+            </article>
+            <article class="action-card hold-card insight-card" tabindex="0" role="button" aria-expanded="false">
+              <span>Monitor</span>
+              <strong class="counter" data-count="1100">0</strong>
+              <p>Hold</p>
+              <div class="card-insight">
+                These campaigns were stable enough to monitor, but not strong enough to justify immediate budget expansion.
+              </div>
+            </article>
+            <article class="action-card reduce-card insight-card" tabindex="0" role="button" aria-expanded="false">
+              <span>Control</span>
+              <strong class="counter" data-count="2169">0</strong>
+              <p>Reduce Budget</p>
+              <div class="card-insight">
+                These campaigns showed weaker return or higher spend risk, making them candidates for budget reduction or control.
+              </div>
+            </article>
+          </div>
+          <div class="action-chart" aria-label="Budget action counts">
+            <div class="stacked-chart" aria-hidden="true">
+              <span class="increase" style="--w: 32.97%"></span>
+              <span class="review" style="--w: 34.34%"></span>
+              <span class="hold" style="--w: 11%"></span>
+              <span class="reduce" style="--w: 21.69%"></span>
+            </div>
+            <div class="bar-row">
+              <span>Increase Budget</span>
+              <div class="bar-track">
+                <div class="bar-fill increase" style="--w: 32.97%"></div>
+              </div>
+              <strong class="counter" data-count="3297">0</strong>
+            </div>
+            <div class="bar-row">
+              <span>Review</span>
+              <div class="bar-track">
+                <div class="bar-fill review" style="--w: 34.34%"></div>
+              </div>
+              <strong class="counter" data-count="3434">0</strong>
+            </div>
+            <div class="bar-row">
+              <span>Hold</span>
+              <div class="bar-track">
+                <div class="bar-fill hold" style="--w: 11%"></div>
+              </div>
+              <strong class="counter" data-count="1100">0</strong>
+            </div>
+            <div class="bar-row">
+              <span>Reduce Budget</span>
+              <div class="bar-track">
+                <div class="bar-fill reduce" style="--w: 21.69%"></div>
+              </div>
+              <strong class="counter" data-count="2169">0</strong>
+            </div>
+          </div>
+          <div class="action-note">
+            <p class="large-number">
+              <span class="counter" data-count="10000">0</span>
+              <small>campaign rows analyzed</small>
+            </p>
+            <p>
+              The largest groups were Review and Increase Budget, showing that the
+              analysis created both scaling opportunities and decision checkpoints.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="platforms">
+        <div class="section-kicker reveal">Platform Action Mix</div>
+        <div class="section-heading reveal">
+          <h2>Scaling signals were not evenly distributed by platform.</h2>
+          <p>
+            Facebook and TikTok showed stronger scaling signals, while LinkedIn carried
+            the clearest budget risk profile.
+          </p>
+        </div>
+
+        <div class="platform-grid">
+          <article class="platform-card highlight spotlight insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <div>
+              <h3>Facebook</h3>
+              <p>Stronger scaling signal</p>
+            </div>
+            <strong>41.0%</strong>
+            <span>Increase Budget</span>
+            <div class="card-insight">
+              Strong scaling mix. A large share of campaigns fell into Increase Budget, suggesting more expansion-ready opportunities.
+            </div>
+          </article>
+          <article class="platform-card highlight spotlight insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <div>
+              <h3>TikTok</h3>
+              <p>Stronger scaling signal</p>
+            </div>
+            <strong>38.9%</strong>
+            <span>Increase Budget</span>
+            <div class="card-insight">
+              Strong upside signal with high average ROAS, but still requires campaign-level review before scaling.
+            </div>
+          </article>
+          <article class="platform-card insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <div>
+              <h3>Google Ads</h3>
+              <p>Included in platform action mix</p>
+            </div>
+            <strong>Mix</strong>
+            <span>Budget action review</span>
+            <div class="card-insight">
+              Mixed platform profile. Strong total reach, but a meaningful share of campaigns still required review.
+            </div>
+          </article>
+          <article class="platform-card insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <div>
+              <h3>Instagram</h3>
+              <p>Included in platform action mix</p>
+            </div>
+            <strong>Mix</strong>
+            <span>Budget action review</span>
+            <div class="card-insight">
+              Moderate action mix. Useful for review, but not the clearest scaling or risk signal in this analysis.
+            </div>
+          </article>
+          <article class="platform-card insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <div>
+              <h3>Twitter</h3>
+              <p>Included in platform action mix</p>
+            </div>
+            <strong>Mix</strong>
+            <span>Budget action review</span>
+            <div class="card-insight">
+              Mixed but usable signal. Some scaling opportunities exist, but campaign-level review remains important.
+            </div>
+          </article>
+          <article class="platform-card risk spotlight-risk insight-card reveal" tabindex="0" role="button" aria-expanded="false">
+            <div>
+              <h3>LinkedIn</h3>
+              <p>Highest risk profile</p>
+            </div>
+            <div class="risk-stack">
+              <span><strong>16.1%</strong> Increase Budget</span>
+              <span><strong>39.3%</strong> Reduce Budget</span>
+              <span><strong>40.9%</strong> Review</span>
+            </div>
+            <div class="card-insight">
+              Highest budget risk profile. Fewer campaigns were scaling-ready, while a larger share fell into Reduce Budget or Review.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section efficiency" id="efficiency">
+        <div class="section-kicker reveal">Efficiency Comparison</div>
+        <div class="section-heading reveal">
+          <h2>ROAS and CPA made the LinkedIn risk visible.</h2>
+          <p>
+            TikTok and Facebook carried much stronger average ROAS than LinkedIn, while
+            LinkedIn also showed a high average CPA.
+          </p>
+        </div>
+
+        <div class="efficiency-summary reveal">
+          ROAS and CPA together made the LinkedIn risk clearer. LinkedIn had lower average ROAS and a much higher average CPA compared with TikTok and Facebook.
+        </div>
+
+        <div class="efficiency-board reveal">
+          <article class="efficiency-card leader insight-card" tabindex="0" role="button" aria-expanded="false">
+            <h3>TikTok</h3>
+            <div class="efficiency-metric">
+              <span>Avg ROAS</span>
+              <strong>10.85</strong>
+            </div>
+            <div class="meter" aria-label="TikTok average ROAS"><span style="--w: 100%"></span></div>
+            <p>Highest ROAS in the comparison set.</p>
+            <div class="card-insight compact">
+              Read alongside CPA and campaign-level action before scaling.
+            </div>
+          </article>
+          <article class="efficiency-card leader insight-card" tabindex="0" role="button" aria-expanded="false">
+            <h3>Facebook</h3>
+            <div class="efficiency-metric">
+              <span>Avg ROAS</span>
+              <strong>10.01</strong>
+            </div>
+            <div class="meter" aria-label="Facebook average ROAS"><span style="--w: 92.26%"></span></div>
+            <p>Strong return profile supporting scale review.</p>
+            <div class="card-insight compact">
+              Strong ROAS supports scale consideration when campaign-level signals also hold up.
+            </div>
+          </article>
+          <article class="efficiency-card warning insight-card" tabindex="0" role="button" aria-expanded="false">
+            <h3>LinkedIn</h3>
+            <div class="efficiency-metric">
+              <span>Avg ROAS</span>
+              <strong>3.05</strong>
+            </div>
+            <div class="meter" aria-label="LinkedIn average ROAS"><span style="--w: 28.11%"></span></div>
+            <p>Lower return profile versus TikTok and Facebook.</p>
+            <div class="card-insight compact">
+              Lower ROAS makes LinkedIn a clearer review and control checkpoint.
+            </div>
+          </article>
+          <article class="efficiency-card warning cpa-card insight-card" tabindex="0" role="button" aria-expanded="false">
+            <h3>LinkedIn</h3>
+            <div class="efficiency-metric">
+              <span>Avg CPA</span>
+              <strong>379.22</strong>
+            </div>
+            <div class="risk-badge">Budget risk checkpoint</div>
+            <p>High CPA makes reduction and review decisions easier to prioritize.</p>
+            <div class="card-insight compact">
+              High CPA strengthens the case for tighter budget review before expansion.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section implication reveal" id="implication">
+        <div class="section-kicker">Business Implication</div>
+        <div class="split">
+          <h2>The practical output is a budget review workflow.</h2>
+          <p>
+            A marketing team can use this analysis to prioritize where budget should
+            move next. Increase Budget campaigns become scaling candidates, Review
+            campaigns become discussion points, Hold campaigns remain monitored, and
+            Reduce Budget campaigns become risk controls. The value is not another
+            dashboard view. The value is a structured decision layer that helps teams
+            spend with more confidence.
+          </p>
+        </div>
+      </section>
+
+      <section class="proof content-section reveal" id="full-case-study">
+        <div>
+          <div class="section-kicker">Full Case Study</div>
+          <h2>Continue the Full Case Study</h2>
+          <p>
+            Read the full write-up on my portfolio for the complete business question,
+            method, findings, and interpretation.
+          </p>
+        </div>
+        <div class="button-row">
+          <a
+            class="button primary"
+            href="https://www.joonhananalytics.com/case-studies/turning-campaign-metrics-into-budget-decisions"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read Full Case Study
+          </a>
+        </div>
+      </section>
+
+      <section class="proof content-section reveal" id="github">
+        <div>
+          <div class="section-kicker">GitHub</div>
+          <h2>Inspect the Project Repo</h2>
+          <p>
+            View the README, workflow files, and project structure behind the analysis.
+          </p>
+        </div>
+        <div class="button-row">
+          <a
+            class="button primary"
+            href="https://github.com/joonhanofficial/turning-campaign-metrics-into-budget-decisions"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub Repo
+          </a>
+        </div>
+      </section>
+
+      <section class="proof content-section reveal" id="contact">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2>Connect With Me</h2>
+          <p>
+            For analytics roles, collaboration, or feedback, you can reach me through
+            my portfolio, LinkedIn, email, or Telegram.
+          </p>
+        </div>
+        <div class="button-row">
+          <a
+            class="button primary"
+            href="https://www.joonhananalytics.com/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Portfolio Contact
+          </a>
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/joon-hanofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            class="button"
+            href="mailto:joonhan.work@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Email
+          </a>
+          <a
+            class="button"
+            href="https://t.me/JoonHanOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Telegram
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Turning Campaign Metrics Into Budget Decisions</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
